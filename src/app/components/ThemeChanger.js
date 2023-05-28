@@ -2,6 +2,9 @@
 
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import Image from 'next/image';
+import lightThemeIcon from '../../../public/lightThemeIcon.svg'
+import darkThemeIcon from '../../../public/darkThemeIcon.svg'
 
 const Themechanger = () => {
   const [mounted, setMounted] = useState(false);
@@ -15,18 +18,30 @@ const Themechanger = () => {
     return null;
   }
 
-  const light = theme === "light";
+  const isLightTheme = theme === "light";
+
   return (
     <>
-      {light ? (
-        <button onClick={() => setTheme("dark")} size={27}>
-          Dark
+      {isLightTheme ? (
+        <button type="button" onClick={() => setTheme("dark")} >
+          <Image
+            priority
+            src={lightThemeIcon}
+            alt="light-theme"
+            height={24}
+            width={24}
+          />
         </button>
-      ) : (
-        <button onClick={() => setTheme("light")} size={27}>
-          Light
-        </button>
-      )}
+        ) : (
+        <button type="button"  onClick={() => setTheme("light")} >
+          <Image
+            priority
+            src={darkThemeIcon}
+            alt="dark-theme"
+            height={24}
+            width={24}
+          />
+        </button>)}
       </>
   );
 };
