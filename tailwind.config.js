@@ -16,4 +16,9 @@ module.exports = {
   },
   plugins: [],
   darkMode: 'class',
+  theme: {
+    letterSpacing: {
+      widest: '0.9rem',
+    }
+  }
 }

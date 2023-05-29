@@ -21,18 +21,28 @@ const Header = () => {
   return (
     <header className='py-12 px-32 flex justify-between items-center'>
       <div>
-      <Image
-        priority
-        src={theme === 'light' ? logoLight : logoDark}
-        alt="logo"
-      />
+       <Link href="/">
+        <Image
+          priority
+          src={theme === 'light' ? logoLight : logoDark}
+          alt="logo"
+        />
+      </Link>
       </div>
       <div className='flex items-center gap-8'>
-        <Link className='h-6 flex items-center' href="/about">About</Link>
+        <Link className='h-6 flex items-center' href="/experience">Experience</Link>
         <Link className='h-6 flex items-center' href="/contact">Contact</Link>
-        <Link className='h-6 flex items-center' href="/resume">Resume</Link>
+        <a
+          className='h-6 flex items-center'
+          href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_LINK}/view?usp=sharing`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Go to Resume Page"
+        >
+          Resume
+        </a>
       <Themechanger />
-      </div>
+      </div> 
     </header>
   )
 }
