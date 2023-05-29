@@ -18,6 +18,11 @@ body {
   background-color: rgb(var(--background-color));
 }
 
+a {
+  height: unset;
+  line-height: 1;
+}
+
 @layer base{
     body {
         @apply dark:bg-gray-800 bg-white

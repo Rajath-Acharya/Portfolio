@@ -23,7 +23,7 @@ const Themechanger = () => {
   return (
     <>
       {isLightTheme ? (
-        <button type="button" onClick={() => setTheme("dark")} >
+        <button type="button" className="h-6" onClick={() => setTheme("dark")} >
           <Image
             priority
             src={lightThemeIcon}
@@ -33,7 +33,7 @@ const Themechanger = () => {
           />
         </button>
         ) : (
-        <button type="button"  onClick={() => setTheme("light")} >
+        <button type="button" className="h-6" onClick={() => setTheme("light")} >
           <Image
             priority
             src={darkThemeIcon}
