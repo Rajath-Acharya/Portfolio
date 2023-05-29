@@ -15,7 +15,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Provider>
           <Header />
-          {children}
+          <main className='py-12 px-48'>
+            {children}
+          </main>
         </Provider>
       </body>
     </html>
