@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from 'react'
-import Themechanger from './ThemeChanger'
+import React, { useEffect, useState } from 'react';
+import Themechanger from './ThemeChanger';
 import Image from 'next/image';
-import logoLight from '../../../public/logoLight.svg'
-import logoDark from '../../../public/logoDark.svg'
+import logoLight from '../../../public/logoLight.svg';
+import logoDark from '../../../public/logoDark.svg';
 import { useTheme } from "next-themes";
 import Link from 'next/link';
 
