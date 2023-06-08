@@ -32,6 +32,7 @@ const Header = () => {
       <div className='flex items-center gap-8'>
         <Link className='h-6 flex items-center' href="/experience">Experience</Link>
         <Link className='h-6 flex items-center' href="/contact">Contact</Link>
+        <Link className='h-6 flex items-center' href="/skills">Skills</Link>
         <a
           className='h-6 flex items-center'
           href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_LINK}/view?usp=sharing`}
